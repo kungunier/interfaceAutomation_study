@@ -41,7 +41,20 @@ res = requests.post(url,data=json.dumps(data),headers=headers)
 
 # 获取响应对象
 # print(res.json())
-pprint(res.json(),width=30)
+# pprint(res.json(),width=30)
+
+# 获取响应对象 json() 与 text 区别
+# json()返回的是字段，可以通过键名获取对应结果  text返回的是字符串，没有键名
+res_json = res.json()
+pprint(res_json)
+print('res_json类型：',type(res_json))
+pprint(res_json['entity']['list'])
+
+res_text = res.text
+pprint(res_text)
+print('res_text类型：',type(res_text))
 
 # 获取响应代码
 print(res.status_code)
+
+
