@@ -6,7 +6,7 @@ import json
 url_login = 'https://bstest.motie.cn:4433/users/login'
 
 # 验证码URL
-url_verity_code = 'https://bstest.motie.cn:4433/users/captcha'
+url_verity_code = 'https://bstest.motie.cn:4433/users/captcha'  # ?时间戳
 
 # 获取验证码cookies
 res = requests.get(url_verity_code)
